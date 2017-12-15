@@ -1,0 +1,20 @@
+<html lang="en">
+    <head>
+        <title> Validation Page </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'courses_app/css/validation.css' %}">
+    </head>
+    <body>
+        <h1> Are you sure you want to delete the following course? </h1>
+        <div id="content">
+            <p> Name: {{ course.name }} </p>
+            <p> Description: {{ course.desc }} </p>
+            <p> Created at: {{ course.created_at }} </p>
+            <button> <a href="/"> No </a></button>
+            <form action='/courses/{{ course.id }}/remove' method = 'POST'>
+                {% csrf_token %}
+                <button> Yes! I want to delete this </button>
+            </form>
+        </div>
+    </body>
+</html>

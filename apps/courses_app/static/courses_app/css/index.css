@@ -1,0 +1,57 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#add-container {
+    margin-left: 100px;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px;
+}
+
+#message-container {
+    display: inline-block;
+}
+
+#description-box {
+    margin-top: 5px;
+}
+
+#name-box input {
+    margin-left: 37px;
+}
+
+form {
+    margin-top: 5px;
+}
+
+button {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    margin-left: 205px;
+    margin-top: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    padding: 15px;
+}

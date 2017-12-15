@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#content {
+    margin-left: 600px;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+form {
+    display: inline-block;
+}

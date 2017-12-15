@@ -1,0 +1,52 @@
+<html lang="en">
+    <head>
+        <title> Course registration </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'courses_app/css/index.css' %}">
+    </head>
+    <body>
+        <h1> Course Registration </h1>
+        <div id="add-container">
+            <h2> Add a new course </h2>
+            <form action='/courses/add' method= 'POST'>
+                {% csrf_token %}
+                <div id="name-box">
+                    <label for="name"> Name: </label>
+                    <input type="text" name="name">
+                </div>
+                <div id="description-box">
+                    <label for="description"> Description: </label>
+                    <input type="text" name="description">
+                </div>
+                <button> Add </button>
+            </form>
+        </div>
+        <div id="message-container">
+        {% if messages %}
+        {% for messages in messages %}
+            <p> {{ messages }} </p>
+        {% endfor %}
+        {% endif %}
+        </div>
+
+        <div id="course-list">
+            <h2> Courses </h2>  
+            <table>
+                <tr>
+                    <th> Course Name </th>
+                    <th> Description </th>
+                    <th> Date Added </th>
+                    <th> Actions </th>
+                </tr>
+                {% for course in courses %}
+                <tr>
+                    <td> {{ course.name }} </td>
+                    <td> {{ course.desc }} </td>
+                    <td> {{ course.created_at }} </td>
+                    <td> <p> <a href="/courses/{{ course.id }}/confirm"> Remove </a></p></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
